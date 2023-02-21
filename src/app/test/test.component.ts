@@ -105,7 +105,7 @@ order:5,question:'Which planet did you see ?', answers:[
       ],correct:'Carrot'
       },
       {
-        order:9,question:'What was the last planet shown?', answers:[
+        order:9,question:'What was the last animal shown?', answers:[
           {name:'Dog', img:'./assets/Dog.jpg'},
           {name:'Pig ', img:'./assets/Pig.jpeg'},
           {name:'Lion', img:'./assets/Lion.jpg'},
