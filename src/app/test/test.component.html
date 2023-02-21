@@ -1,0 +1,46 @@
+
+
+
+<div class="container mt-5">
+    <div *ngIf="i>4 && display==false" class="container my-5" >
+        Timer: <h1>{{time}}</h1>
+        <div *ngFor="let f of tab[i].answers ">
+            
+            <img src={{f.img}} class="img-fluid" alt="Responsive image" style="width: 20rem; height: 20rem;">
+            <br/>
+        </div>
+      
+    
+    </div>
+    <div class="d-flex justify-content-center row" *ngIf="display==true">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>MCQ Quiz</h4><span>({{i+1}} of 15)</span></div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{tab[i].question}}</h5>
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div class="ans ml-2" *ngFor="let a of tab[i].answers">
+                        <div *ngIf="i<5">
+                            <div *ngIf="a.img.length>0" >
+                                <img src={{a.img}} class="img-fluid" alt="imgAnswer" style="width: 10rem; height: 10rem;"/>
+                            </div> 
+                        </div>
+                      
+                      
+<label class="radio"> <input type="radio" name="answer" value={{a.name}} [(ngModel)]="ans"> <span>{{a.name}}</span>
+</label>    
+</div></div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <button class="btn btn-primary border-success align-items-center btn-success" type="button" (click)="next()">Next<i class="fa fa-angle-right ml-2" ></i></button></div>
+            </div>
+        </div>
+    </div>
+</div>

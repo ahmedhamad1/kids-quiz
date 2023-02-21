@@ -1,0 +1,58 @@
+<html>
+    <body style="height: 48rem;">
+        <div class="container -5 " id="sect1">
+            <br/>
+            <h1 style="text-align: center; color: black;">Welcome!</h1>
+            <br/>  <br/>  <br/>
+          <form *ngIf="!continuev" #f="ngForm" (ngSubmit)="start(f.value)">
+              <div class="form-group">
+                  <input class="form-control" placeholder="Your FirstName" name="name" [(ngModel)]="user.name" #name="ngModel" required>
+                </div>
+                <div *ngIf="name.invalid && name.touched" class="alert alert-danger" role="alert">
+                  Please enter your Firstname!
+                   
+                 </div>
+                  <div class="form-group">
+                  <input class="form-control" placeholder="Your LastName" name="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" required >
+                </div>
+                <div *ngIf="lastname.invalid && lastname.touched" class="alert alert-danger" role="alert">
+                  Please enter your Lastname!
+                   
+                 </div>
+              
+                  <div class="form-group">
+                  <input type="number" class="form-control" placeholder="Your Age" name="age" [(ngModel)]="user.age" #age="ngModel" required>
+                </div>
+                <div *ngIf="age.invalid && age.touched" class="alert alert-danger" role="alert">
+                  Please enter your age!
+                   
+                 </div>
+              
+              
+                <div class="row">
+                  <div class="col-md-4 col-lg-2">
+                    <button class="btn btn-primary btn-block" [hidden]="f.invalid" type="submit">Start</button>
+                  </div>
+                </div>
+          </form>
+          <div class="container" *ngIf="continuev">
+             
+              <div class="col-md-4 col-lg-2">
+                  <br/><br/> <br/><br/> <br/><br/> 
+                <button class="btn btn-success btn-block" (click)="continue()">Continue</button>
+              </div>
+           
+              <div class="col-md-4 col-lg-2">
+                  <br/><br/> <br/><br/>
+                  <button class="btn btn-secondary btn-block"  (click)="Restart()">Restart</button>
+                </div>
+            </div>
+          
+          </div>
+          
+          
+          
+          
+    </body>
+</html>
+
