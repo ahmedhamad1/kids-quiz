@@ -11,11 +11,11 @@ import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full',
   }, 
   {
-    path: '', component:HomeComponent
+    path: 'home', component:HomeComponent
    
   }, 
   {
