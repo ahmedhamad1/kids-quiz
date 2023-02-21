@@ -1,17 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardUsersComponent } from './dashboard-users/dashboard-users.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { ImagesComponent } from './images/images.component';
-import { PreventReloadGuard } from './prevent-reload.guard';
+
 import { ScoreComponent } from './score/score.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: 'home',
     pathMatch: 'full',
   }, 
   {
@@ -46,7 +48,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes,{
+    useHash: true
+ })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
