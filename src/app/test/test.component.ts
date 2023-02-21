@@ -14,7 +14,7 @@ lastarray:any;
 
 i=0;
 score=0;
-time1: number = 0;
+time1: number = 30;
 timer1: any;
 display1=true;
 
@@ -201,7 +201,7 @@ order:5,question:'Which planet did you see ?', answers:[
 ];
 tabAns=[];
 ans='No answer';
-time: number = 0;
+time: number = 30;
 timer: any;
 display=true;
 random=true;
@@ -297,7 +297,7 @@ localStorage.setItem('tab',JSON.stringify(this.tab));
       } else {
         clearInterval(this.timer);
         this.display=true;
-        this.time=0;
+        this.time=30;
      
       }
     }, 1000);
