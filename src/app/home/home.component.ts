@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   start(f:any){
   
       localStorage.setItem('user',JSON.stringify(this.user));
-      this.router.navigate(['/images']);
+      this.router.navigate(['/test']);
     
   }
   continue(){

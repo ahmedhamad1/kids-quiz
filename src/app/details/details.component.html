@@ -1,0 +1,50 @@
+<!-- Header End -->
+<body id="page-top">
+
+    <div id="wrapper">
+    
+         
+        <!-- Ajout Start -->
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-10 col-lg-10">
+                    <div class="border">
+                        <div class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                                <h4>MCQ Quiz</h4><span>Note : ({{save.note}})</span></div>
+                        </div>
+    
+    
+    
+                        <div *ngFor="let question of questions;let index = index" class="question bg-white p-3 border-bottom">
+                            <div class="d-flex flex-row align-items-center question-title">
+                                <h3 class="text-danger">Q.{{index+1}}</h3>
+                                <h5 class="mt-1 ml-2">{{getTab(question.number).question}}</h5>
+                                <h4 *ngIf="question.choice!=getTab(question.number).correct" style="color: red;">False</h4>
+                                <h4 *ngIf="question.choice===getTab(question.number).correct" style="color: green;">True</h4>
+                            </div>
+    <div *ngFor="let answer of getTab(question.number).answers;let index = index" class="ans ml-2" >
+    <label  class="radio"  >   <span >{{answer.name}} </span>  
+    </label>    &nbsp;<span *ngIf="question.choice===answer.name">Selected </span>
+                <span style="color: green;" *ngIf="getTab(question.number).correct===answer.name">/True </span>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white"><button class="btn btn-primary d-flex align-items-center btn-danger" type="button" (click)="return()"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Home</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div></body>

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ImagesComponent implements OnInit {
 
-  time: number = 30;
+  time: number = 4;
   timer: any;
 
   constructor(private router:Router) { }

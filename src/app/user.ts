@@ -1,8 +1,9 @@
 export class User {
-  name:any 
-  lastname:any
+  firstName:any 
+  lastName:any
   age:number | undefined
-  tabAns:Array<Quiz>=[]
+  questions:Array<Quiz>=[]
+  note:string
   constructor(){}
 
 }

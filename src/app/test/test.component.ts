@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 import { User } from '../user';
 
 @Component({
@@ -7,9 +9,14 @@ import { User } from '../user';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-user:User=new User();
-indd= Math.floor(Math.random() *7)
+user:User=JSON.parse(localStorage.getItem("user"));
+lastarray:any;
+
 i=0;
+score=0;
+time1: number = 0;
+timer1: any;
+display1=true;
 
 tab=[ {
   order:1, question:'What was the man wearing ?' , answers:[{
@@ -62,7 +69,7 @@ order:5,question:'Which planet did you see ?', answers:[
   {name:'Jupiter', img:'./assets/jupiter.jpeg'},
   {name:'Mars', img:'./assets/mars.jpeg'},
   {name:'Venus', img:'./assets/venus.jpg'},
-],correct:'A yarn ball'
+],correct:'Saturn'
 },
 {
   order:6,question:'What was the fourth country shown ?', answers:[
@@ -119,35 +126,166 @@ order:5,question:'Which planet did you see ?', answers:[
             {name:'Uranus', img:'./assets/uranus.jpg'},
           ],correct:'Uranus'
           },
+        
+            {
+              order:11,question:'What was the fourth number shown?', answers:[
+                {name:'45', img:'./assets/45.jpg'},
+                {name:'99 ', img:'./assets/99.jpg'},
+                {name:'12', img:'./assets/12.jpg'},
+                {name:'1', img:'./assets/1.png'},
+                {name:'20', img:'./assets/Renault.jpg'},
+                {name:'3', img:'./assets/3.png'},
+                {name:'66', img:'./assets/66.jpg'},
+                {name:'17', img:'./assets/17.png'},
+                {name:'11', img:'./assets/11.png'},
+                {name:'50', img:'./assets/50.jpg'},
+              ],correct:'1'
+              },
+              {
+                order:12,question:'What was the nineth logo shown?', answers:[
+                  {name:'Ford', img:'./assets/Ford.jpg'},
+                  {name:'Fiat ', img:'./assets/Fiat.png'},
+                  {name:'Volkswagen', img:'./assets/Volkswagen.jpeg'},
+                  {name:'Peugeot', img:'./assets/Peugeot.png'},
+                  {name:'Renault', img:'./assets/Renault.jpeg'},
+                  {name:'Ferari', img:'./assets/Ferari.png'},
+                  {name:'Porshe', img:'./assets/Porshe.jpeg'},
+                  {name:'Toyota', img:'./assets/Toyota.png'},
+                  {name:'KIA', img:'./assets/KIA.png'},
+                  {name:'Mercedes Benz', img:'./assets/Mercedes.png'},
+                ],correct:'KIA'
+                },
+                {
+                  order:13,question:'What was the sixth name shown?', answers:[
+                    {name:'Mohamed', img:'./assets/mohamed.png'},
+                    {name:'Luis ', img:'./assets/Luis.png'},
+                    {name:'Emilie', img:'./assets/Emilie.png'},
+                    {name:'Adam', img:'./assets/Adam.png'},
+                    {name:'Jack', img:'./assets/Jack.png'},
+                    {name:'Kevin', img:'./assets/Kevin.jpeg'},
+                    {name:'Rose', img:'./assets/Rose.png'},
+                    {name:'Malek', img:'./assets/Malek.png'},
+                    {name:'Sabri', img:'./assets/Sabri.png'},
+                    {name:'Enzo', img:'./assets/Enzo.png'},
+                  ],correct:'Kevin'
+                  },
+                  {
+                    order:14,question:'What was the second food shown?', answers:[
+                      {name:'Hamburger', img:'./assets/hamburger.jpeg'},
+                      {name:'Pasta', img:'./assets/pasta.jpeg'},
+                      {name:'Riz', img:'./assets/riz.jpeg'},
+                      {name:'Fish', img:'./assets/fish.jpeg'},
+                      {name:'Tacos', img:'./assets/tacos.jpeg'},
+                      {name:'Cheese', img:'./assets/fromage.jpg'},
+                      {name:'Salade', img:'./assets/salade.jpeg'},
+                      {name:'Pop corn', img:'./assets/pop.jpg'},
+                      {name:'couscous', img:'./assets/couscous.jpeg'},
+                      {name:'brik', img:'./assets/brik.jpg'},
+                    ],correct:'Pasta'
+                    },
+                    {
+                      order:15,question:'What was the third word shown?', answers:[
+                        {name:'Install', img:'./assets/10-Words.png'},
+                        {name:'Learn ', img:''},
+                        {name:'Itemize', img:''},
+                        {name:'Collaborate', img:''},
+                        {name:'Brighten', img:''},
+                        {name:'Gain', img:''},
+                        {name:'Edge', img:''},
+                        {name:'Observe', img:''},
+                        {name:'Rob', img:''},
+                        {name:'Tug', img:''},
+                      ],correct:'Itemize'
+                      },
 
 ];
 tabAns=[];
 ans='No answer';
-time: number = 7;
+time: number = 0;
 timer: any;
 display=true;
-  constructor() {
+random=true;
+started;
+  constructor( private router:Router , private service:AppService) {
    
    }
 
   ngOnInit(): void {
+
  if(localStorage.getItem("i")){
   this.i=parseInt(localStorage.getItem("i"));
- }
-  }
-  next(){
- if(this.i==14){
+  this.display1=false;
+ this.tab=JSON.parse(localStorage.getItem('tab'));
+
 
  }else{
+  this.startTimer1();
+  const firstFive = this.tab.slice(0, 5); // Extract first five elements
+this.shuffle(firstFive); // Shuffle the first five elements
+this.tab.splice(0, 5, ...firstFive); 
+console.log(this.tab);
+this.tab=this.shuffleFromIndex5(this.tab);
+
+localStorage.setItem('tab',JSON.stringify(this.tab));
+ 
+ }
+  }
+   shuffleFromIndex5(array) {
+    const subarray = array.slice(5); // Get subarray starting from index 5
+    for (let i = subarray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [subarray[i], subarray[j]] = [subarray[j], subarray[i]]; // Swap elements using destructuring assignment
+    }
+    array.splice(5, subarray.length, ...subarray); // Splice shuffled subarray back into original array
+    return array
+  }
+  shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  next(){
+ 
+ if(this.i==14){
+  this.user.questions.push({number:this.tab[this.i].order,choice:this.ans});
+  if(this.ans==this.tab[this.i].correct){
+    this.score+=1;}
+    this.router.navigate(['/score',this.score]);
+    localStorage.removeItem('i');
+    localStorage.removeItem('user');
+    localStorage.removeItem('tab');
+    this.user.note=this.score+'/15';
+
+    this.service.save(this.user).subscribe(res=>{
+      this.router.navigate(['/score',this.score,res._id]); 
+    }
+     
+    )
+  
+
+ 
+
+ }else{
+  this.random=true;
+  if(this.ans==this.tab[this.i].correct){
+    this.score+=1;
+  }
   this.i=this.i+1;
     localStorage.setItem("i",this.i.toString());
-    this.user.tabAns.push({number:this.i,choice:this.ans});
+    this.user.questions.push({number:this.tab[this.i-1].order,choice:this.ans});
+    console.log(this.user);
+  
+    
     this.ans='No answer';
+    
     if(this.i>4){
       this.startTimer();
       this.display=false;
     }
-    console.log(this.display);
+    console.log(this.user);
+   
  }
     
   
@@ -159,11 +297,50 @@ display=true;
       } else {
         clearInterval(this.timer);
         this.display=true;
-        this.time=7;
+        this.time=0;
      
       }
     }, 1000);
   }
+  
+  startTimer1() {
+    this.timer1 = setInterval(() => {
+      if (this.time1 > 0) {
+        this.time1--;
+      } else {
+        clearInterval(this.timer1);
+        this.display1=false;
+      }
+    }, 1000);
+  }
+  shuffleArray(array: any[]){
+  if(this.random){
+
+
+      let currentIndex = array.length;
+      let temporaryValue: any;
+      let randomIndex: number;
+  
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+  
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+  
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+      this.random=false;
+this.lastarray=array;
+      return array;
+    }
+    return this.lastarray;
+    
+  
+}
 
 
 }

@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { ImagesComponent } from './images/images.component';
 import { TestComponent } from './test/test.component';
 import { RandomizePipe } from './randomize.pipe';
+import { ScoreComponent } from './score/score.component';
+import { DashboardUsersComponent } from './dashboard-users/dashboard-users.component';
+import { DetailsComponent } from './details/details.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { RandomizePipe } from './randomize.pipe';
     HomeComponent,
     ImagesComponent,
     TestComponent,
-    RandomizePipe
+    RandomizePipe,
+    ScoreComponent,
+    DashboardUsersComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
