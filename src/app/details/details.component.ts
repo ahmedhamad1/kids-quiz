@@ -66,7 +66,7 @@ export class DetailsComponent implements OnInit {
     {name:'Jupiter', img:'./assets/jupiter.jpeg'},
     {name:'Mars', img:'./assets/mars.jpeg'},
     {name:'Venus', img:'./assets/venus.jpg'},
-  ],correct:'Saturn', title:'planets'
+  ],correct:'Jupiter', title:'planets'
   },
   {
     order:6,question:'What was the fourth country shown ?', answers:[
@@ -100,7 +100,7 @@ export class DetailsComponent implements OnInit {
           {name:'Zucchini', img:'./assets/zucchini.PNG'},
           {name:'Tomato', img:'./assets/tomato.PNG'},
           {name:'Union', img:'./assets/union.PNG'},
-        ],correct:'Carrot', title:'vegetables'
+        ],correct:'Cucumber', title:'vegetables'
         },
         {
           order:9,question:'What was the last animal shown?', answers:[
@@ -119,10 +119,11 @@ export class DetailsComponent implements OnInit {
               {name:'Venus ', img:'./assets/venus.jpg'},
               {name:'Earth', img:'./assets/Earth.jpg'},
               {name:'Mars', img:'./assets/mars.jpeg'},
-              {name:'Jupiter', img:'./assets/jupiter.jpeg'},
+             
               {name:'Saturn', img:'./assets/saturn.jpg'},
               {name:'Uranus', img:'./assets/uranus.jpg'},
-            ],correct:'Uranus', title:'planets'
+              {name:'Jupiter', img:'./assets/jupiter.jpeg'},
+            ],correct:'Jupiter', title:'planets'
             },
           
               {
@@ -171,7 +172,7 @@ export class DetailsComponent implements OnInit {
                       order:14,question:'What was the second food shown?', answers:[
                         {name:'Hamburger', img:'./assets/hamburger.jpeg'},
                         {name:'Pasta', img:'./assets/pasta.jpeg'},
-                        {name:'Riz', img:'./assets/riz.jpeg'},
+                        {name:'Rice', img:'./assets/riz.jpeg'},
                         {name:'Fish', img:'./assets/fish.jpeg'},
                         {name:'Tacos', img:'./assets/tacos.jpeg'},
                         {name:'Cheese', img:'./assets/fromage.jpg'},
