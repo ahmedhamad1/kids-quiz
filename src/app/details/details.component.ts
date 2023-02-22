@@ -99,7 +99,7 @@ export class DetailsComponent implements OnInit {
           {name:'Carrot', img:'./assets/carrot.PNG'},
           {name:'Zucchini', img:'./assets/zucchini.PNG'},
           {name:'Tomato', img:'./assets/tomato.PNG'},
-          {name:'Union', img:'./assets/union.PNG'},
+          {name:'Onion', img:'./assets/union.PNG'},
         ],correct:'Cucumber', title:'vegetables'
         },
         {

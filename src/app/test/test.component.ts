@@ -102,7 +102,7 @@ order:5,question:'Which planet did you see ?', answers:[
         {name:'Carrot', img:'./assets/carrot.PNG'},
         {name:'Zucchini', img:'./assets/zucchini.PNG'},
         {name:'Tomato', img:'./assets/tomato.PNG'},
-        {name:'Union', img:'./assets/union.PNG'},
+        {name:'Onion', img:'./assets/union.PNG'},
       ],correct:'Cucumber', title:'vegetables'
       },
       {
@@ -121,12 +121,13 @@ order:5,question:'Which planet did you see ?', answers:[
             {name:'Mercury', img:'./assets/Mercury.jpg'},
             {name:'Venus ', img:'./assets/venus.jpg'},
             {name:'Earth', img:'./assets/Earth.jpg'},
-            {name:'Mars', img:'./assets/mars.jpeg'},
+            
            
             {name:'Saturn', img:'./assets/saturn.jpg'},
             {name:'Uranus', img:'./assets/uranus.jpg'},
             {name:'Jupiter', img:'./assets/jupiter.jpeg'},
-          ],correct:'Jupiter', title:'planets'
+            {name:'Mars', img:'./assets/mars.jpeg'},
+          ],correct:'Mars', title:'planets'
           },
         
             {
@@ -201,6 +202,7 @@ order:5,question:'Which planet did you see ?', answers:[
                       },
 
 ];
+
 tabAns=[];
 ans='No answer';
 time: number = 30;
