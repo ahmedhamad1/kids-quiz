@@ -135,7 +135,7 @@ order:5,question:'Which planet did you see ?', answers:[
                 {name:'99 ', img:'./assets/99.jpg'},
                 {name:'12', img:'./assets/12.jpg'},
                 {name:'1', img:'./assets/1.png'},
-                {name:'20', img:'./assets/20.jpeg'},
+                {name:'20', img:'./assets/20.jpg'},
                 {name:'3', img:'./assets/3.png'},
                 {name:'66', img:'./assets/66.jpg'},
                 {name:'17', img:'./assets/17.png'},
