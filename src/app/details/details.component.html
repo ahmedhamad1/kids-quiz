@@ -24,12 +24,13 @@
                                 <h5 class="mt-1 ml-2">{{getTab(question.number).question}}</h5>
                                 <h4 *ngIf="question.choice!=getTab(question.number).correct" style="color: red;">False</h4>
                                 <h4 *ngIf="question.choice===getTab(question.number).correct" style="color: green;">True</h4>
-                            </div>
-    <div *ngFor="let answer of getTab(question.number).answers;let index = index" class="ans ml-2" >
-        <span *ngIf=" question.choice!=getTab(question.number).correct && question.choice===answer.name">
+                               </div>
+
+
+    <div class="ans ml-2" >
+        <span style="color: green;" >Correct Answer:{{getTab(question.number).correct}} </span>
+        <span *ngIf=" question.choice!=getTab(question.number).correct && question.choice">
             <span style="color: red;">False</span> (You Selected {{question.choice}}) </span>
-  
-                <span style="color: green;" *ngIf="getTab(question.number).correct===answer.name"> {{answer.name}} </span>
     
     </div>
     
