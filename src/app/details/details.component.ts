@@ -35,7 +35,7 @@ export class DetailsComponent implements OnInit {
     {name:'A tennis ball', img:'./assets/tennis.jpeg'},
     {name:'A sock ', img:'./assets/sock.jpg'},
     {name:'An eraser', img:'./assets/eraser.jpeg'},
-    {name:'A yarn ball', img:'./assets/yarn.jpg'},
+    {name:'A yarn ball', img:'./assets/yarnb.jpg'},
     {name:'A MOUSE', img:'./assets/mouse.jpg'},
   ],correct:'A yarn ball', title:''
   },
@@ -132,7 +132,7 @@ export class DetailsComponent implements OnInit {
                   {name:'99 ', img:'./assets/99.jpg'},
                   {name:'12', img:'./assets/12.jpg'},
                   {name:'1', img:'./assets/1.png'},
-                  {name:'20', img:'./assets/Renault.jpeg'},
+                  {name:'20', img:'./assets/20.jpeg'},
                   {name:'3', img:'./assets/3.png'},
                   {name:'66', img:'./assets/66.jpg'},
                   {name:'17', img:'./assets/17.png'},
