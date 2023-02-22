@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
 
   tab=[ {
     order:1, question:'What was the man wearing ?' , answers:[{
-      name:'Earmuffs' , img:'./assets/earmuffs.jpg'
+      name:'Earmuffs' , img:'./assets/earmuffs.jpg' , 
     },{
       name:'Scarf',img:'./assets/scarf.jpeg'
     },{
@@ -28,7 +28,7 @@ export class DetailsComponent implements OnInit {
     name:'Earrings',img:'./assets/earrings.jpeg'
     }
    
-    ],correct:'Airpods'
+    ],correct:'Airpods', title:''
   } ,
   {
   order:2,question:'What was the cat playing with ?', answers:[
@@ -37,7 +37,7 @@ export class DetailsComponent implements OnInit {
     {name:'An eraser', img:'./assets/eraser.jpeg'},
     {name:'A yarn ball', img:'./assets/yarn.jpg'},
     {name:'A MOUSE', img:'./assets/mouse.jpg'},
-  ],correct:'A yarn ball'
+  ],correct:'A yarn ball', title:''
   },
   {
   order:3,question:'How many animals were shown ?', answers:[
@@ -47,7 +47,7 @@ export class DetailsComponent implements OnInit {
     {name:'3', img:''},
     {name:'2', img:''}
   
-  ],correct:'3'
+  ],correct:'3', title:''
   },
   {
   order:4,question:'What color was the xbox controller?', answers:[
@@ -57,7 +57,7 @@ export class DetailsComponent implements OnInit {
     {name:'Purple', img:''},
     {name:'Red', img:''}
   
-  ],correct:'Black'
+  ],correct:'Black', title:''
   },
   {
   order:5,question:'Which planet did you see ?', answers:[
@@ -66,18 +66,19 @@ export class DetailsComponent implements OnInit {
     {name:'Jupiter', img:'./assets/jupiter.jpeg'},
     {name:'Mars', img:'./assets/mars.jpeg'},
     {name:'Venus', img:'./assets/venus.jpg'},
-  ],correct:'Saturn'
+  ],correct:'Saturn', title:'planets'
   },
   {
     order:6,question:'What was the fourth country shown ?', answers:[
       {name:'Tunisia', img:'./assets/tunisia.png'},
       {name:'France', img:'./assets/france.jpg'},
       {name:'United State', img:'./assets/us.jpeg'},
+      {name:'Sudan', img:'./assets/suden.png'},
       {name:'Canada', img:'./assets/canada.png'},
       {name:'Italie', img:'./assets/italie.jpg'},
-      {name:'Soudan', img:'./assets/suden.png'},
+     
       {name:'Syria', img:'./assets/syria.png'},
-    ],correct:'Canada'
+    ],correct:'Sudan', title:'countries'
     },
     {
       order:7,question:'What was the sixth fruit shown?', answers:[
@@ -88,7 +89,7 @@ export class DetailsComponent implements OnInit {
         {name:'Peach', img:'./assets/peach.jpg'},
         {name:'Strawberry', img:'./assets/strawberry.jpeg'},
         {name:'Raspberry', img:'./assets/Raspberry.jpg'},
-      ],correct:'Strawberry'
+      ],correct:'Strawberry', title:'fruits'
       },
       {
         order:8,question:'What was the third vegetable shown?', answers:[
@@ -99,10 +100,10 @@ export class DetailsComponent implements OnInit {
           {name:'Zucchini', img:'./assets/zucchini.PNG'},
           {name:'Tomato', img:'./assets/tomato.PNG'},
           {name:'Union', img:'./assets/union.PNG'},
-        ],correct:'Carrot'
+        ],correct:'Carrot', title:'vegetables'
         },
         {
-          order:9,question:'What was the last planet shown?', answers:[
+          order:9,question:'What was the last animal shown?', answers:[
             {name:'Dog', img:'./assets/Dog.jpg'},
             {name:'Pig ', img:'./assets/Pig.jpeg'},
             {name:'Lion', img:'./assets/Lion.jpg'},
@@ -110,7 +111,7 @@ export class DetailsComponent implements OnInit {
             {name:'Monkey', img:'./assets/Monkey.jpeg'},
             {name:'Donkey', img:'./assets/Donkey.jpg'},
             {name:'Dolphin', img:'./assets/Dolphin.jpg'},
-          ],correct:'Dolphin'
+          ],correct:'Dolphin', title:'animals'
           },
           {
             order:10,question:'What was the last planet shown?', answers:[
@@ -121,7 +122,7 @@ export class DetailsComponent implements OnInit {
               {name:'Jupiter', img:'./assets/jupiter.jpeg'},
               {name:'Saturn', img:'./assets/saturn.jpg'},
               {name:'Uranus', img:'./assets/uranus.jpg'},
-            ],correct:'Uranus'
+            ],correct:'Uranus', title:'planets'
             },
           
               {
@@ -130,13 +131,13 @@ export class DetailsComponent implements OnInit {
                   {name:'99 ', img:'./assets/99.jpg'},
                   {name:'12', img:'./assets/12.jpg'},
                   {name:'1', img:'./assets/1.png'},
-                  {name:'20', img:'./assets/Renault.jpg'},
+                  {name:'20', img:'./assets/Renault.jpeg'},
                   {name:'3', img:'./assets/3.png'},
                   {name:'66', img:'./assets/66.jpg'},
                   {name:'17', img:'./assets/17.png'},
                   {name:'11', img:'./assets/11.png'},
                   {name:'50', img:'./assets/50.jpg'},
-                ],correct:'1'
+                ],correct:'1', title:'numbers'
                 },
                 {
                   order:12,question:'What was the nineth logo shown?', answers:[
@@ -150,21 +151,21 @@ export class DetailsComponent implements OnInit {
                     {name:'Toyota', img:'./assets/Toyota.png'},
                     {name:'KIA', img:'./assets/KIA.png'},
                     {name:'Mercedes Benz', img:'./assets/Mercedes.png'},
-                  ],correct:'KIA'
+                  ],correct:'KIA', title:'logos'
                   },
                   {
                     order:13,question:'What was the sixth name shown?', answers:[
                       {name:'Mohamed', img:'./assets/mohamed.png'},
-                      {name:'Luis ', img:'./assets/Luis.png'},
-                      {name:'Emilie', img:'./assets/Emilie.png'},
+                      {name:'Ahmed ', img:'./assets/ahmed.png'},
+                      {name:'Omar', img:'./assets/Omar.png'},
                       {name:'Adam', img:'./assets/Adam.png'},
-                      {name:'Jack', img:'./assets/Jack.png'},
-                      {name:'Kevin', img:'./assets/Kevin.jpeg'},
-                      {name:'Rose', img:'./assets/Rose.png'},
+                      {name:'Osman', img:'./assets/Osman.png'},
+                      {name:'Fatima', img:'./assets/Fatima.png'},
+                      {name:'Aysha', img:'./assets/Aysha.png'},
                       {name:'Malek', img:'./assets/Malek.png'},
                       {name:'Sabri', img:'./assets/Sabri.png'},
-                      {name:'Enzo', img:'./assets/Enzo.png'},
-                    ],correct:'Kevin'
+                      {name:'Abukaker', img:'./assets/Abukaker.png'},
+                    ],correct:'Fatima', title:'names'
                     },
                     {
                       order:14,question:'What was the second food shown?', answers:[
@@ -178,7 +179,7 @@ export class DetailsComponent implements OnInit {
                         {name:'Pop corn', img:'./assets/pop.jpg'},
                         {name:'couscous', img:'./assets/couscous.jpeg'},
                         {name:'brik', img:'./assets/brik.jpg'},
-                      ],correct:'Pasta'
+                      ],correct:'Pasta', title:'foods'
                       },
                       {
                         order:15,question:'What was the third word shown?', answers:[
@@ -192,7 +193,7 @@ export class DetailsComponent implements OnInit {
                           {name:'Observe', img:''},
                           {name:'Rob', img:''},
                           {name:'Tug', img:''},
-                        ],correct:'Itemize'
+                        ],correct:'Itemize', title:'words'
                         },
   
   ];

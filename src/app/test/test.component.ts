@@ -76,11 +76,12 @@ order:5,question:'Which planet did you see ?', answers:[
     {name:'Tunisia', img:'./assets/tunisia.png'},
     {name:'France', img:'./assets/france.jpg'},
     {name:'United State', img:'./assets/us.jpeg'},
+    {name:'Sudan', img:'./assets/suden.png'},
     {name:'Canada', img:'./assets/canada.png'},
     {name:'Italie', img:'./assets/italie.jpg'},
-    {name:'Soudan', img:'./assets/suden.png'},
+   
     {name:'Syria', img:'./assets/syria.png'},
-  ],correct:'Canada', title:'countries'
+  ],correct:'Sudan', title:'countries'
   },
   {
     order:7,question:'What was the sixth fruit shown?', answers:[
