@@ -26,6 +26,7 @@
                                 <h4 *ngIf="question.choice===getTab(question.number).correct" style="color: green;">True</h4>
                             </div>
     <div *ngFor="let answer of getTab(question.number).answers;let index = index" class="ans ml-2" >
+        <span *ngIf="question.choice===answer.name">False (You Selected {{question.choice}}) </span>
   
                 <span style="color: green;" *ngIf="getTab(question.number).correct===answer.name"> {{answer.name}} </span>
     
