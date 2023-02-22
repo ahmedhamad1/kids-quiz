@@ -29,7 +29,7 @@
 
     <div class="ans ml-2" >
         <span style="color: green;" >Correct Answer:{{getTab(question.number).correct}} </span>
-        <span *ngIf=" question.choice!=getTab(question.number).correct && question.choice">
+        <span *ngIf=" question.choice!=getTab(question.number).correct && question.choice"><br/>
             <span style="color: red;">False</span> (You Selected {{question.choice}}) </span>
     
     </div>
