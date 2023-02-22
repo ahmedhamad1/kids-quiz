@@ -19,10 +19,13 @@
 <div class="container mt-5">
     <div *ngIf="i>4 && display==false && display1==false" class="container my-5" >
         Timer: <h1>{{time}}</h1>
+        <h3>List of {{tab[i].title}} </h3>
+        <h3></h3>
         <div *ngFor="let f of tab[i].answers ; let index = index;">
         
             <div *ngIf="f.img.length>0">
-                <h5>{{index+1}}</h5>
+                <span></span>
+                <h5 *ngIf="tab[i].order!=15">{{index+1}})- {{f.name}}</h5> 
                 <img src={{f.img}} class="img-fluid" alt="Responsive image" style="width: 20rem; height: 20rem;">
             </div>
 
@@ -36,7 +39,7 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row justify-content-between align-items-center mcq">
-                        <h4>MCQ Quiz</h4><span>({{i+1}} of 15)</span></div>
+                        <h4>Question ({{i+1}} of 15)</h4><span></span></div>
                 </div>
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">

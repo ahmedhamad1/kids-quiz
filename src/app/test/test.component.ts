@@ -14,13 +14,13 @@ lastarray:any;
 
 i=0;
 score=0;
-time1: number = 30;
+time1: number = 2;
 timer1: any;
 display1=true;
 
 tab=[ {
   order:1, question:'What was the man wearing ?' , answers:[{
-    name:'Earmuffs' , img:'./assets/earmuffs.jpg'
+    name:'Earmuffs' , img:'./assets/earmuffs.jpg' , 
   },{
     name:'Scarf',img:'./assets/scarf.jpeg'
   },{
@@ -31,7 +31,7 @@ tab=[ {
   name:'Earrings',img:'./assets/earrings.jpeg'
   }
  
-  ],correct:'Airpods'
+  ],correct:'Airpods', title:''
 } ,
 {
 order:2,question:'What was the cat playing with ?', answers:[
@@ -40,7 +40,7 @@ order:2,question:'What was the cat playing with ?', answers:[
   {name:'An eraser', img:'./assets/eraser.jpeg'},
   {name:'A yarn ball', img:'./assets/yarn.jpg'},
   {name:'A MOUSE', img:'./assets/mouse.jpg'},
-],correct:'A yarn ball'
+],correct:'A yarn ball', title:''
 },
 {
 order:3,question:'How many animals were shown ?', answers:[
@@ -50,7 +50,7 @@ order:3,question:'How many animals were shown ?', answers:[
   {name:'3', img:''},
   {name:'2', img:''}
 
-],correct:'3'
+],correct:'3', title:''
 },
 {
 order:4,question:'What color was the xbox controller?', answers:[
@@ -60,7 +60,7 @@ order:4,question:'What color was the xbox controller?', answers:[
   {name:'Purple', img:''},
   {name:'Red', img:''}
 
-],correct:'Black'
+],correct:'Black', title:''
 },
 {
 order:5,question:'Which planet did you see ?', answers:[
@@ -69,7 +69,7 @@ order:5,question:'Which planet did you see ?', answers:[
   {name:'Jupiter', img:'./assets/jupiter.jpeg'},
   {name:'Mars', img:'./assets/mars.jpeg'},
   {name:'Venus', img:'./assets/venus.jpg'},
-],correct:'Saturn'
+],correct:'Saturn', title:'planets'
 },
 {
   order:6,question:'What was the fourth country shown ?', answers:[
@@ -80,7 +80,7 @@ order:5,question:'Which planet did you see ?', answers:[
     {name:'Italie', img:'./assets/italie.jpg'},
     {name:'Soudan', img:'./assets/suden.png'},
     {name:'Syria', img:'./assets/syria.png'},
-  ],correct:'Canada'
+  ],correct:'Canada', title:'countries'
   },
   {
     order:7,question:'What was the sixth fruit shown?', answers:[
@@ -91,7 +91,7 @@ order:5,question:'Which planet did you see ?', answers:[
       {name:'Peach', img:'./assets/peach.jpg'},
       {name:'Strawberry', img:'./assets/strawberry.jpeg'},
       {name:'Raspberry', img:'./assets/Raspberry.jpg'},
-    ],correct:'Strawberry'
+    ],correct:'Strawberry', title:'fruits'
     },
     {
       order:8,question:'What was the third vegetable shown?', answers:[
@@ -102,7 +102,7 @@ order:5,question:'Which planet did you see ?', answers:[
         {name:'Zucchini', img:'./assets/zucchini.PNG'},
         {name:'Tomato', img:'./assets/tomato.PNG'},
         {name:'Union', img:'./assets/union.PNG'},
-      ],correct:'Carrot'
+      ],correct:'Carrot', title:'vegetables'
       },
       {
         order:9,question:'What was the last animal shown?', answers:[
@@ -113,7 +113,7 @@ order:5,question:'Which planet did you see ?', answers:[
           {name:'Monkey', img:'./assets/Monkey.jpeg'},
           {name:'Donkey', img:'./assets/Donkey.jpg'},
           {name:'Dolphin', img:'./assets/Dolphin.jpg'},
-        ],correct:'Dolphin'
+        ],correct:'Dolphin', title:'animals'
         },
         {
           order:10,question:'What was the last planet shown?', answers:[
@@ -124,7 +124,7 @@ order:5,question:'Which planet did you see ?', answers:[
             {name:'Jupiter', img:'./assets/jupiter.jpeg'},
             {name:'Saturn', img:'./assets/saturn.jpg'},
             {name:'Uranus', img:'./assets/uranus.jpg'},
-          ],correct:'Uranus'
+          ],correct:'Uranus', title:'planets'
           },
         
             {
@@ -139,7 +139,7 @@ order:5,question:'Which planet did you see ?', answers:[
                 {name:'17', img:'./assets/17.png'},
                 {name:'11', img:'./assets/11.png'},
                 {name:'50', img:'./assets/50.jpg'},
-              ],correct:'1'
+              ],correct:'1', title:'numbers'
               },
               {
                 order:12,question:'What was the nineth logo shown?', answers:[
@@ -153,21 +153,21 @@ order:5,question:'Which planet did you see ?', answers:[
                   {name:'Toyota', img:'./assets/Toyota.png'},
                   {name:'KIA', img:'./assets/KIA.png'},
                   {name:'Mercedes Benz', img:'./assets/Mercedes.png'},
-                ],correct:'KIA'
+                ],correct:'KIA', title:'logos'
                 },
                 {
                   order:13,question:'What was the sixth name shown?', answers:[
                     {name:'Mohamed', img:'./assets/mohamed.png'},
-                    {name:'Luis ', img:'./assets/Luis.png'},
-                    {name:'Emilie', img:'./assets/Emilie.png'},
+                    {name:'Ahmed ', img:'./assets/ahmed.png'},
+                    {name:'Omar', img:'./assets/Omar.png'},
                     {name:'Adam', img:'./assets/Adam.png'},
-                    {name:'Jack', img:'./assets/Jack.png'},
-                    {name:'Kevin', img:'./assets/Kevin.jpeg'},
-                    {name:'Rose', img:'./assets/Rose.png'},
+                    {name:'Osman', img:'./assets/Osman.png'},
+                    {name:'Fatima', img:'./assets/Fatima.jpeg'},
+                    {name:'Aysha', img:'./assets/Aysha.png'},
                     {name:'Malek', img:'./assets/Malek.png'},
                     {name:'Sabri', img:'./assets/Sabri.png'},
-                    {name:'Enzo', img:'./assets/Enzo.png'},
-                  ],correct:'Kevin'
+                    {name:'Abukaker', img:'./assets/Abukaker.png'},
+                  ],correct:'Fatima', title:'names'
                   },
                   {
                     order:14,question:'What was the second food shown?', answers:[
@@ -181,7 +181,7 @@ order:5,question:'Which planet did you see ?', answers:[
                       {name:'Pop corn', img:'./assets/pop.jpg'},
                       {name:'couscous', img:'./assets/couscous.jpeg'},
                       {name:'brik', img:'./assets/brik.jpg'},
-                    ],correct:'Pasta'
+                    ],correct:'Pasta', title:'foods'
                     },
                     {
                       order:15,question:'What was the third word shown?', answers:[
@@ -195,13 +195,13 @@ order:5,question:'Which planet did you see ?', answers:[
                         {name:'Observe', img:''},
                         {name:'Rob', img:''},
                         {name:'Tug', img:''},
-                      ],correct:'Itemize'
+                      ],correct:'Itemize', title:'words'
                       },
 
 ];
 tabAns=[];
 ans='No answer';
-time: number = 30;
+time: number = 2;
 timer: any;
 display=true;
 random=true;
@@ -297,7 +297,7 @@ localStorage.setItem('tab',JSON.stringify(this.tab));
       } else {
         clearInterval(this.timer);
         this.display=true;
-        this.time=30;
+        this.time=2;
      
       }
     }, 1000);
