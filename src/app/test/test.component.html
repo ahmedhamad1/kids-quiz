@@ -1,6 +1,6 @@
 
 <div *ngIf="display1==true && i==0 " class="container my-5" >
-    <h1 style="font-weight: bold; color: blue;">Timer:  </h1><h1 style="font-weight: bold; color: red;">{{time1}}</h1>
+    <h1 style="font-weight: bold; color: blue;">Timer: <span style="font-weight: bold; color: red;">{{time1}}</span> </h1>
     <h1> Check those Photos</h1>
     <img src="./assets/img/img1.PNG " class="img-fluid" alt="Responsive image" style="width: 10rem; height: 10rem;">
     <img src="./assets/img/img2.PNG " class="img-fluid" alt="Responsive image" style="width: 10rem; height: 10rem;">
@@ -18,7 +18,7 @@
 
 <div class="container mt-5">
     <div *ngIf="i>4 && display==false && display1==false" class="container my-5" >
-        <h1 style="font-weight: bold; color: blue;">Timer:  </h1><h1 style="font-weight: bold; color: red;">{{time}}</h1>
+        <h1 style="font-weight: bold; color: blue;">Timer: <span style="font-weight: bold; color: red;">{{time}}</span> </h1>
         <h3>List of {{tab[i].title}} </h3>
         <h3></h3>
         <div *ngFor="let f of tab[i].answers ; let index = index;">
