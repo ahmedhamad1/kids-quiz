@@ -57,13 +57,13 @@
                         </div>
                       
        <div>
-        <label class="radio"> <input type="radio" name="answer" value={{a.name}} [(ngModel)]="ans"> <span>{{a.name}}</span>
+        <label class="radio"> <input type="radio" name="answer" value={{a.name}} [(ngModel)]="ans" (ngModelChange)="onModelChange()"> <span>{{a.name}}</span>
         </label>  
        </div>               
   
 </div></div>
                 <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
-                    <button class="btn btn-primary border-success align-items-center btn-success" type="button" (click)="next()">Next<i class="fa fa-angle-right ml-2" ></i></button></div>
+                    <button class="btn btn-primary border-success align-items-center btn-success" type="button" [disabled]="disablenext" (click)="next()">Next<i class="fa fa-angle-right ml-2" ></i></button></div>
             </div>
         </div>
     </div>

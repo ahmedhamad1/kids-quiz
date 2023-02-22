@@ -14,9 +14,10 @@ lastarray:any;
 
 i=0;
 score=0;
-time1: number = 30;
+time1: number = 0;
 timer1: any;
 display1=true;
+disablenext=true;
 
 tab=[ {
   order:1, question:'What was the man wearing ?' , answers:[{
@@ -78,7 +79,7 @@ order:5,question:'Which planet did you see ?', answers:[
     {name:'United State', img:'./assets/us.jpeg'},
     {name:'Sudan', img:'./assets/suden.png'},
     {name:'Canada', img:'./assets/canada.png'},
-    {name:'Italie', img:'./assets/italie.jpg'},
+    {name:'Italy', img:'./assets/italie.jpg'},
    
     {name:'Syria', img:'./assets/syria.png'},
   ],correct:'Sudan', title:'countries'
@@ -205,16 +206,23 @@ order:5,question:'Which planet did you see ?', answers:[
 
 tabAns=[];
 ans='No answer';
-time: number = 30;
+time: number = 0;
 timer: any;
 display=true;
 random=true;
 started;
-  constructor( private router:Router , private service:AppService) {
-   
-   }
 
+  constructor( private router:Router , private service:AppService) {
+    
+   }
+   onModelChange(){
+    if(this.ans!='No answer'){
+      this.disablenext=false;
+    }
+   }
   ngOnInit(): void {
+   
+    
 
  if(localStorage.getItem("i")){
   this.i=parseInt(localStorage.getItem("i"));
@@ -250,6 +258,7 @@ localStorage.setItem('tab',JSON.stringify(this.tab));
     }
     return array;
   }
+ 
   next(){
  
  if(this.i==14){
@@ -283,6 +292,7 @@ localStorage.setItem('tab',JSON.stringify(this.tab));
   
     
     this.ans='No answer';
+    this.disablenext=true;
     
     if(this.i>4){
       this.startTimer();
@@ -301,7 +311,7 @@ localStorage.setItem('tab',JSON.stringify(this.tab));
       } else {
         clearInterval(this.timer);
         this.display=true;
-        this.time=30;
+        this.time=0;
      
       }
     }, 1000);
