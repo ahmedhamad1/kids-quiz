@@ -118,12 +118,13 @@ export class DetailsComponent implements OnInit {
               {name:'Mercury', img:'./assets/Mercury.jpg'},
               {name:'Venus ', img:'./assets/venus.jpg'},
               {name:'Earth', img:'./assets/Earth.jpg'},
-              {name:'Mars', img:'./assets/mars.jpeg'},
+              
              
               {name:'Saturn', img:'./assets/saturn.jpg'},
               {name:'Uranus', img:'./assets/uranus.jpg'},
               {name:'Jupiter', img:'./assets/jupiter.jpeg'},
-            ],correct:'Jupiter', title:'planets'
+              {name:'Mars', img:'./assets/mars.jpeg'},
+            ],correct:'Mars', title:'planets'
             },
           
               {
