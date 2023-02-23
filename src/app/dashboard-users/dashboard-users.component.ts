@@ -23,5 +23,14 @@ list:any;
      console.log(this.list)
     })
   }
+  clear(){
+    if (confirm("Are you sure to clear the data?") == true) {
+        this.us.deleteSaves().subscribe(res=>{
+          this.list=res
+        })
+    } else {
+      
+    }
+  }
 
 }

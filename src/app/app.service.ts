@@ -25,4 +25,7 @@ export class AppService {
   getSave(id:number):Observable<any>{
     return this._http.get<any>(this.url+'/save/'+id);
   }
+  deleteSaves():Observable<any>{
+    return this._http.delete<any>(this.url+'/deleteSaves');
+  }
 }

@@ -29,7 +29,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">List Users : {{list.length}} user </h6>
-                            
+                            <button class=" btn btn-warning" (click)="clear()" [disabled]="!list.length">Clear data</button>   
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
