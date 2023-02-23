@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 import { User } from '../user';
 
 @Component({
@@ -13,12 +14,16 @@ export class HomeComponent implements OnInit {
   error=false;
   continuev=false;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router , private us:AppService) { }
 
   ngOnInit(): void {
     if(parseInt (localStorage.getItem("i"))>0){
       this.continuev=true;
      }
+     this.us.getAllU().subscribe(res=>{
+      this.user.firstName='Subject#'+(res.length+1); 
+
+    })
   }
   start(f:any){
   

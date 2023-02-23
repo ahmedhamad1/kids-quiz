@@ -19,6 +19,7 @@ timer1: any;
 display1=true;
 disablenext=true;
 
+
 tab=[ {
   order:1, question:'What was the man wearing ?' , answers:[{
     name:'Earmuffs' , img:'./assets/earmuffs.jpg' , 
@@ -79,7 +80,7 @@ order:5,question:'Which planet did you see ?', answers:[
     {name:'United State', img:'./assets/us.jpeg'},
     {name:'Sudan', img:'./assets/suden.png'},
     {name:'Canada', img:'./assets/canada.png'},
-    {name:'Italy', img:'./assets/italie.jpg'},
+    {name:'Italie', img:'./assets/italie.jpg'},
    
     {name:'Syria', img:'./assets/syria.png'},
   ],correct:'Sudan', title:'countries'
@@ -170,7 +171,7 @@ order:5,question:'Which planet did you see ?', answers:[
                     {name:'Aysha', img:'./assets/Aysha.png'},
                     {name:'Malek', img:'./assets/Malek.png'},
                     {name:'Sabri', img:'./assets/Sabri.png'},
-                    {name:'Abukaker', img:'./assets/Abukaker.png'},
+                    {name:'Abu bakr', img:'./assets/Abukaker.png'},
                   ],correct:'Fatima', title:'names'
                   },
                   {
@@ -181,7 +182,7 @@ order:5,question:'Which planet did you see ?', answers:[
                       {name:'Fish', img:'./assets/fish.jpeg'},
                       {name:'Tacos', img:'./assets/tacos.jpeg'},
                       {name:'Cheese', img:'./assets/fromage.jpg'},
-                      {name:'Salade', img:'./assets/salade.jpeg'},
+                      {name:'Salad', img:'./assets/salade.jpeg'},
                       {name:'Pop corn', img:'./assets/pop.jpg'},
                       {name:'couscous', img:'./assets/couscous.jpeg'},
                       {name:'brik', img:'./assets/brik.jpg'},

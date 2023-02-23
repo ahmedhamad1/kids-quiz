@@ -1,6 +1,5 @@
 export class User {
   firstName:any 
-  lastName:any
   age:number | undefined
   questions:Array<Quiz>=[]
   note:string
